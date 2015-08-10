@@ -1,5 +1,5 @@
 # move-WP-install-directory
-directions on how to move the WordPress install to a different directory
+# Directions on how to move the WordPress install to a different directory
 
 
 Sometimes you want to put your WordPress install into its own folder. This will help avoid clutter in your web hosting environment by removing all those WordPress files and folders from the root of your domain, and it will make it easier to manage various web endeavors. Suppose you want to add other web software installs; you may have a hard time finding the files you need if they're all mixed in together (although it helps that everything WordPress at this level is named wp-something). It gets messy if you want to do anything other than just use WordPress.
@@ -14,11 +14,11 @@ To move your WordPress install to the new directory, first create the wpsystem f
 
 When the files have been moved, open index.php and locate this code snippet:
 
-  require('./wp-blog-header.php');
+    require('./wp-blog-header.php');
   
 Replace it with this code snippet
 
-  require('./wpsystem/wp-blog-header.php');
+    require('./wpsystem/wp-blog-header.php');
   
 As you can see, the code now points to the wpsystem folder instead and to the wo-blog-header.php file.
 
